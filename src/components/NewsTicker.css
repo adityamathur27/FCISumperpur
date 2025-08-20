@@ -1,0 +1,45 @@
+/* Modern ticker animation to replace <marquee> */
+.ticker-wrap {
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+  .ticker-move {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 18s linear infinite;
+  }
+
+  .ticker-move:hover {
+    animation-play-state: paused;
+  }
+
+  .news-link {
+    color: #1976d2;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .news-link:hover {
+    color: #14375a;
+    text-decoration: underline;
+  }
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.news-ticker {
+  background: #ffd600;
+  color: #222;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+.news-label {
+  color: #1976d2;
+  font-weight: bold;
+}

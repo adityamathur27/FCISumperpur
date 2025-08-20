@@ -1,0 +1,59 @@
+/* Outer container for centering & shadow */
+.slider-wrapper {
+  max-width: 85%;
+  max-height: 80%;
+  position: relative;
+  margin: 1.5rem auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container to keep fixed aspect ratio */
+.slider-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 42%; /* 42% ~ 21:9, use 56.25% for 16:9 */
+  background: #f0f0f0;
+}
+
+/* Actual image */
+.slider-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* crops while keeping center */
+}
+
+/* Caption styling */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+}
+
+/* Caption text */
+.carousel-caption h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption {
+    padding: 0.3rem 0.7rem;
+  }
+  .carousel-caption h5 {
+    font-size: 0.9rem;
+  }
+}

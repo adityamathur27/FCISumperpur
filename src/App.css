@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  background: #f5f6fa;
+}
+
+.App-header {
+  background: #1976d2;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}

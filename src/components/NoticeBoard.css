@@ -1,0 +1,26 @@
+.notice-board {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.notice-board h2 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+.notice-board ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+.notice-board li {
+  margin-bottom: 0.7rem;
+}
+.notice-board a {
+  color: #1976d2;
+  text-decoration: underline;
+}
+.notice-board a:hover {
+  color: #ffd600;
+}

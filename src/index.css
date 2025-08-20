@@ -1,0 +1,10 @@
+/* Basic CSS reset and body styling */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f5f6fa;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}

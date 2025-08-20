@@ -1,0 +1,47 @@
+.starburst-wrap {
+  position: absolute;
+  right: 0%;
+  top: 4%;
+  z-index: 999;
+}
+
+.starburst-link {
+  display: inline-block;
+  text-decoration: none;
+  transform-origin: center;
+  animation: bob 2s ease-in-out infinite, glow 1.6s ease-in-out infinite alternate;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.starburst-link:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.starburst-gif {
+  display: block;
+  border-radius: 10%;
+  transition: transform 0.3s ease;
+}
+
+
+.starburst-link:hover .starburst-gif {
+  transform: scale(1.08);
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); } /* smaller bob for smaller size */
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 2px rgba(90,160,0,.4)) drop-shadow(0 0 6px rgba(90,160,0,.4)); }
+  to   { filter: drop-shadow(0 0 6px rgba(118,195,0,.6)) drop-shadow(0 0 12px rgba(118,195,0,.6)); }
+}
+
+@media (max-width: 480px) {
+  .starburst-wrap {
+    right: 2%;
+    top: 2%;
+  }
+}

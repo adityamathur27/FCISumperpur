@@ -1,0 +1,163 @@
+.our-staff-container {
+  background: linear-gradient(145deg, #f5f5f5, #ffffff);
+  padding: 2.5rem 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.staff-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.staff-image img {
+  width: 100%;
+  height: 300px;
+  object-fit:contain;
+}
+
+.staff-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.staff-info h2 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.staff-info .role {
+  color: #ff6600;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.staff-info .qualification {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.staff-info .experience {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* -------------------- */
+/* 🔧 Responsive Tweaks */
+/* -------------------- */
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .staff-image img {
+    height: 250px;
+  }
+
+  .staff-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .staff-info .qualification,
+  .staff-info .experience {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .staff-image img {
+    height: 220px;
+  }
+
+  .staff-info {
+    padding: 15px;
+  }
+
+  .staff-info h2 {
+    font-size: 1.1rem;
+  }
+
+  .staff-info .role {
+    font-size: 0.95rem;
+  }
+
+  .staff-info .qualification,
+  .staff-info .experience {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .staff-image img {
+    height: 350px;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .staff-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .staff-info .qualification,
+  .staff-info .experience {
+    font-size: 1rem;
+  }
+}

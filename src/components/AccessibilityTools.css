@@ -1,0 +1,62 @@
+
+.accessibility-fab-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2000;
+}
+.accessibility-fab {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.accessibility-fab:hover {
+  background: #ffd600;
+  color: #1976d2;
+}
+.accessibility-popover {
+  position: absolute;
+  bottom: 3.5rem;
+  right: 0;
+  background: #fff;
+  color: #14375a;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(20,55,90,0.15);
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 160px;
+  align-items: flex-start;
+  animation: fadeIn 0.2s;
+}
+.accessibility-popover button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.accessibility-popover button:hover {
+  background: #ffd600;
+  color: #14375a;
+}
+@media (max-width: 600px) {
+  .accessibility-fab-container {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

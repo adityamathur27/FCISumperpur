@@ -1,0 +1,41 @@
+*{
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.vision-objective {
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    max-width: 900px;
+    gap: 1.5rem;
+    margin: 2.5rem auto;
+    padding: 2.5rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .vision-objective h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .vision-objective ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+    color: #34495e;
+  }
+  
+  .vision-objective li {
+    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+  }
+  

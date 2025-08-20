@@ -1,0 +1,31 @@
+.about {
+  background: #fff;
+  margin: 2.5rem auto;
+  padding: 2.5rem 1.5rem;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(20,55,90,0.10);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+.about h2 {
+  color: #14375a;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+.about p {
+  color: #333;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.about-list {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 700px;
+  color: #14375a;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  padding-left: 1.2rem;
+}
