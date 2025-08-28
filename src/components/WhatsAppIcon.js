@@ -8,7 +8,7 @@ const WhatsAppIcon = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
 
-  const phoneNumber = '9694994586'; // 🔁 Replace with your WhatsApp number
+  const phoneNumber = '9414197791'; // 🔁 Replace with your WhatsApp number
 
   const handleSend = () => {
     if (!message.trim()) return;

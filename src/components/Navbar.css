@@ -1,71 +1,112 @@
-.navbar {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  background: #1976d2;
-  color: #fff;
-  padding: 1rem 2rem;
-  row-gap: 2rem;
-  column-gap: 6rem;
-}
+/* ----------------------
+   Overall Navbar Layout
+-------------------------*/
 
-.navbar {
-  position: sticky;
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #14375a;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
   top: 0;
   z-index: 100;
-  background: #14375a;
-  color: #fff;
-  padding: 1rem 2.5rem;
-  box-shadow: 0 2px 12px rgba(20,55,90,0.08);
-  overflow: visible;
 }
-.navbar-logo {
-  font-size: 2rem;
+.brand-name-caption{
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+}
+/* ----------------------
+   Header Top (Logo + Name + Right Logo)
+-------------------------*/
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background-color: #14375a;
+}
+
+.header-logo {
+  height: 100px;
+  width: auto;
+  border-radius: 10%;
+}
+
+.brand-name {
+  color: #ffd600;
+  font-size: 1.8rem;
   font-weight: bold;
-  letter-spacing: 1px;
-  color: #ffd600;
-  text-shadow: 1px 1px 4px #0d2236;
-}
-.navbar-logo a {
-  color: #ffd600;
+  letter-spacing: 1.2px;
   text-decoration: none;
+  text-shadow: 1px 1px 5px #0d2236;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s ease;
 }
+
+.brand-name:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------------
+   Navigation Bar Menu
+-------------------------*/
+
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  background-color: #14375a;
+  padding: 0.5rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 2rem;
   margin: 0;
   padding: 0;
-  align-items:center;
+  align-items: center;
   overflow: visible;
 }
-.navbar-links li a, .navbar-links li span {
+
+.navbar-links li a,
+.navbar-links li span {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   transition: background 0.2s, color 0.2s;
 }
-.navbar-links li a:hover, .navbar-links li span:hover {
+
+.navbar-links li a:hover,
+.navbar-links li span:hover {
   background: #ffd600;
   color: #14375a;
 }
+
+/* ----------------------
+   Dropdown Menus
+-------------------------*/
+
 .dropdown {
   position: relative;
   cursor: pointer;
-
 }
+
 .dropdown-menu {
-position: absolute;
+  position: absolute;
   display: none;
   top: 100%;
   left: 0;
   background: #fff;
   color: #14375a;
   min-width: 210px;
-  box-shadow: 0 4px 16px rgba(20,55,90,0.15);
+  box-shadow: 0 4px 16px rgba(20, 55, 90, 0.15);
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   z-index: 2000;
@@ -73,26 +114,29 @@ position: absolute;
   padding: 0.5rem 0;
   animation: fadeIn 0.5s;
 }
+
 .dropdown-menu li {
   padding: 0.6rem 1.5rem;
-/*overflow: hidden;*/
-/*text-overflow: ellipsis;*/
-white-space: nowrap;
+  white-space: nowrap;
 }
+
 .dropdown-menu li a {
   color: #14375a;
   text-decoration: none;
   display: block;
-  font-size: 1.05rem;
+  font-size: 0.8rem;
   border-radius: 4px;
 }
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
 .dropdown-menu li a:hover {
   background: #e3f2fd;
   color: #1976d2;
 }
+
 .dropdown-menu .dropdown {
   position: relative;
 }
@@ -103,46 +147,117 @@ white-space: nowrap;
   margin-left: 1px;
   border-radius: 8px;
 }
+
+/* ----------------------
+   Animation
+-------------------------*/
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@media (max-width: 900px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 1rem;
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  .navbar-links {
-    gap: 1rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-@media (max-width: 600px) {
-  .navbar {
-    padding: 0.7rem 0.5rem;
-  }
-  .navbar-logo {
-    font-size: 1.3rem;
-  }
-  .navbar-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-    align-items: flex-start;
-  }
-}
+
+/* ----------------------
+   Courses Menu Placement (on Desktop)
+-------------------------*/
+
 .courses-menu {
   left: 0;
   right: auto;
   top: 100%;
 }
 
-/* On large screens (desktop), float to the left of parent */
 @media (min-width: 601px) {
   .courses-menu {
     position: absolute;
     top: 100%;
-    right: 20%; /* Push it to the left of the parent */
+    right: 20%;
     left: auto;
+  }
+}
+
+/* ----------------------
+   Responsive Design
+-------------------------*/
+
+
+@media (max-width: 1000px) {
+  .navbar-menu {
+    flex-direction: column;
+    align-items: center;   /* instead of flex-start */
+    padding: 1rem 1rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+    justify-content: center;  /* ensures centering */
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-logo {
+    height: 70px;
+    width: auto;
+  }
+
+  .navbar-links li a,
+  .navbar-links li span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
+  }
+  .navbar-links li a,
+  .navbar-links li span{
+    font-size: 0.8rem;
+  }
+  .brand-name-caption{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-logo {
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    gap: 0.3rem;
+  }
+  .navbar-links li a,
+  .navbar-links li span{
+    font-size: 0.8rem;
   }
 }

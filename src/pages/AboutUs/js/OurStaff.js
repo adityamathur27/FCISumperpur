@@ -30,7 +30,7 @@ const staffMembers = [
     image: RINA
   },
   {
-    name: "ALPESH KUMAR",
+    name: "KALPESH KUMAR",
     role: "Accountant",
     qualification: "BA, PGDCA, RSCIT",
     experience: "10+ years",
