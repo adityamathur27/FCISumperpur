@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';   // ✅ Import Link
 import './Footer.css';
 
 
@@ -10,13 +11,13 @@ function Footer() {
           <strong>Food Craft Institute Sumerpur</strong> &copy; {new Date().getFullYear()} | All Rights Reserved
         </div>
         <div className="footer-links">
-          <a href="/home">Home</a>
-          <a href="/courses">Courses</a>          
-          <a href="/gallery">Gallery</a>
-          <a href="/contact">Contact</a>
+          <Link to="/home">Home</Link>
+          <Link to="/courses">Courses</Link>          
+          <Link to="/gallery">Gallery</Link>
+          <Link to="/contact">Contact</Link>
         </div>
         <div className="footer-contact">
-          <p><b>Address:</b>Opp. 132 kv GSS, National Highway Bypass, Jakha Nagar, Sumerpur, Pali, Rajasthan.</p>
+          <p><b>Address:</b> Opp. 132 kv GSS, National Highway Bypass, Jakha Nagar, Sumerpur, Pali, Rajasthan.</p>
           <p><b>Email:</b> fcisumerpur@gmail.com</p>
           <p><b>Phone:</b> 02933-255030, 9413592614, 9694994586, 9680675153</p>
         </div>
