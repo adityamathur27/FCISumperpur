@@ -1,0 +1,201 @@
+.brand-name-caption{
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+}
+/* ----------------------
+   Header Top (Logo + Name + Right Logo)
+-------------------------*/
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: #14375a;
+}
+
+.header-logo {
+  height: 80px;
+  width: auto;
+  border-radius: 10%;
+}
+
+.brand-name {
+  color: #ffd600;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1.0px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #0d2236;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.brand-name:hover {
+  transform: scale(1.05);
+}
+
+
+.mobile-navbar {
+  background: white;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #14375a;  /* Dark blue typical for college */
+  position: relative;
+  z-index: 1000;
+}
+
+
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffd600; /* Warm yellow accent */
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
+  color: #ffea45;
+  outline: none;
+}
+
+.mobile-navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #e2e2e2;
+  background: #f9fafc;
+  backdrop-filter: blur(6px);
+}
+
+.mobile-navbar-menu > li {
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile-nav-link,
+.mobile-submenu li a {
+  display: block;
+  padding: 15px 20px;
+  color: #14375a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.mobile-nav-link:hover,
+.mobile-submenu li a:hover,
+.mobile-nav-link:focus,
+.mobile-submenu li a:focus {
+  background-color: rgba(255, 214, 0, 0.15); /* soft yellow highlight */
+  color: #b89c00;
+  outline: none;
+}
+
+.mobile-nav-parent {
+  padding: 15px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.mobile-nav-parent:hover,
+.mobile-nav-parent:focus {
+  background-color: rgba(255, 214, 0, 0.15);
+  outline: none;
+  backdrop-filter: blur(8px);
+}
+
+.mobile-icon {
+  font-size: 22px;
+  color: #14375a;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-parent:hover .mobile-icon,
+.mobile-nav-parent:focus .mobile-icon {
+  color: #ffd600;
+}
+
+.mobile-submenu {
+  list-style: none;
+  padding-left: 24px;
+  background-color: white;
+  margin: 0;
+}
+
+.mobile-submenu li {
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+/* Hide mobile navbar on desktop */
+@media (min-width: 1000px) {
+  .mobile-navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .header-logo{
+    height: 80px;
+    width: auto;
+  }
+  .brand-name{
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+@media (max-width: 550px) {
+  .header-logo{
+    height: 50px;
+    width: auto;
+  }
+  .brand-name{
+    font-size: 0.8rem;
+    text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+    
+  }
+  .brand-name-caption{
+    font-size: 0.6rem;
+  }
+  .header-top{    
+  padding: 0.5rem 0.7rem;
+  }
+}
+
+@media (max-width: 418px) {
+  .header-logo{
+    height: 30px;
+    width: auto;
+  }
+  .brand-name{
+    font-size: 0.6rem;
+    text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+    
+  }
+  .brand-name-caption{
+    font-size: 0.5rem;
+  }
+  .header-top{    
+  padding: 0.5rem 0.5rem;
+  }
+}
