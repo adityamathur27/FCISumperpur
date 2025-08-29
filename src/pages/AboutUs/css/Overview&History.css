@@ -1,39 +1,70 @@
-*{
+* {
   height: auto;
   width: auto;
   margin: 0;
   padding: 0;
 }
+
 .overview-history {
-    padding: 2rem;
-    background: #fff;
-    display: flex;
-    max-width: 900px;
-    gap: 1.5rem;
-    margin: 2.5rem auto;
-    padding: 2.5rem 1.5rem;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .overview-history h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #2c3e50;
-  }
-  
-  .overview-history p {
-    list-style: disc;
-    padding-left: 1.5rem;
-    line-height: 1.6;
-    color: #34495e;
-        margin-bottom: 0.75rem;
-    font-size: 1.6rem;
+  padding: 2.5rem 1.5rem;
+  background: #fff;
+  display: flex;
+  max-width: 900px;
+  gap: 1.5rem;
+  margin: 2.5rem auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.overview-history h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.overview-history p {
+  padding-left: 1.5rem;
+  line-height: 1.6;
+  color: #34495e;
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .overview-history {
+    max-width: 95%;
+    padding: 2rem 1rem;
   }
 
-  
+  .overview-history h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .overview-history p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-history {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .overview-history h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .overview-history p {
+    font-size: 1.1rem;
+  }
+}
