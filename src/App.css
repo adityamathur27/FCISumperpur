@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-  background: #f5f6fa;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--neutral-bg);
 }
 
 .App-header {

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 import "../css/OurStaff.css";
 
 import BHAGWAT from "../../../assets/staff/Bhagwat Singh.webp";
@@ -50,19 +51,28 @@ export default function OurStaff() {
     <div className="our-staff-container">
       <h1 className="page-title">Meet Our Staff</h1>
       <p className="page-subtitle">
-        A team of highly qualified professionals dedicated to shaping future hospitality leaders.
+        A team of highly qualified, seasoned professionals dedicated to shaping future leaders of the global hospitality industry.
       </p>
       <div className="staff-grid">
         {staffMembers.map((member, index) => (
           <div className="staff-card" key={index}>
-            <div className="staff-image">
-              <img src={member.image} alt={member.name} />
+            <div className="staff-image-wrapper">
+              <img src={member.image} alt={member.name} className="staff-avatar" />
+              <div className="role-badge">{member.role}</div>
             </div>
             <div className="staff-info">
               <h2>{member.name}</h2>
-              <p className="role">{member.role}</p>
-              <p className="qualification">{member.qualification}</p>
-              <p className="experience">Experience: {member.experience}</p>
+              <div className="info-divider"></div>
+              
+              <div className="staff-detail-row">
+                <FaGraduationCap className="detail-icon" />
+                <span className="qualification">{member.qualification}</span>
+              </div>
+              
+              <div className="staff-detail-row">
+                <FaBriefcase className="detail-icon" />
+                <span className="experience">{member.experience} Experience</span>
+              </div>
             </div>
           </div>
         ))}

@@ -10,9 +10,9 @@ function About() {
       <p>Food Craft Institute, Sumerpur is an institute under Department of Tourism, Govt. of Rajasthan, set up with the objective to provide training in all the Craft and skills, both theoretical and practical, and necessary organizational and management techniques required for the efficient functioning of Hotel and Catering establishments. Food Craft Institute was established on 7th Feb 2012, where after it was formally inaugurated on April 23rd 2018.</p>
       <h3>Courses:</h3>
       <p>The institute is affiliated to National Council for Hotel Management and Catering Technology, Noida, MOT, Govt. of India and runs the following courses:</p>
-      <table style={{width:'100%',borderCollapse:'collapse',marginBottom:'1rem'}} border="1">
+      <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1rem' }} border="1">
         <thead>
-          <tr style={{background:'#f5f5f5'}}>
+          <tr style={{ background: '#f5f5f5' }}>
             <th>S. No.</th>
             <th>Courses</th>
             <th>Duration</th>

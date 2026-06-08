@@ -30,13 +30,27 @@
 }
 
 @keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); } /* smaller bob for smaller size */
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  /* smaller bob for smaller size */
 }
 
 @keyframes glow {
-  from { filter: drop-shadow(0 0 2px rgba(90,160,0,.4)) drop-shadow(0 0 6px rgba(90,160,0,.4)); }
-  to   { filter: drop-shadow(0 0 6px rgba(118,195,0,.6)) drop-shadow(0 0 12px rgba(118,195,0,.6)); }
+  from {
+    filter: drop-shadow(0 0 2px rgba(90, 160, 0, .4)) drop-shadow(0 0 6px rgba(90, 160, 0, .4));
+  }
+
+  to {
+    filter: drop-shadow(0 0 6px rgba(118, 195, 0, .6)) drop-shadow(0 0 12px rgba(118, 195, 0, .6));
+  }
 }
 
 @media (max-width: 480px) {

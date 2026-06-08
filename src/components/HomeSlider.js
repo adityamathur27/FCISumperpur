@@ -10,6 +10,7 @@ import img6 from "../assets/images/home page photo/6.webp";
 import img7 from "../assets/images/home page photo/7.webp";
 import img8 from "../assets/images/home page photo/8.webp";
 import img9 from "../assets/images/home page photo/9.webp";
+import img10 from "../assets/images/home page photo/Photo_bhaskar.webp"
 import "./HomeSlider.css";
 
 const images = [
@@ -22,6 +23,7 @@ const images = [
   { src: img7, caption: "Side View" },
   { src: img8, caption: "Classroom" },
   { src: img9, caption: "Mess" },
+  { src: img10, caption: "Green Campus Initiative" },
 ];
 
 function HomeSlider() {

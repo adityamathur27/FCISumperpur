@@ -1,30 +1,75 @@
 import React from 'react';
 import logo from '../assets/images/FCI Logo.jpg';
+import { FaCheckCircle, FaAward, FaBuilding, FaUserGraduate } from 'react-icons/fa';
 import './Hero.css';
 
 function Hero() {
   return (
-    <>
-      <section className="about-hero-info" style={{background:'#f5f5f5',padding:'2rem 0 1rem 0',marginBottom:'-1rem'}}>
-        <div style={{maxWidth:800,margin:'0 auto',padding:'0 1rem'}}>
-          <h2 style={{color:'#14375a',marginBottom:'0.5rem'}}>About Food Craft Institute Sumerpur</h2>
-          <p style={{fontWeight:500,marginBottom:'1rem'}}>FCI, Sumerpur is a premier institution dedicated to excellence in hospitality education and training. Affiliated with the National Council for Hotel Management & Catering Technology (NCHMCT), the institute offers world-class infrastructure, experienced faculty, and a vibrant campus life.</p>
-          <ul style={{marginBottom:'1rem',paddingLeft:'1.2rem'}}>
-            <li>Modern classrooms, well-equipped kitchens, and training restaurants</li>
-            <li>Strong industry connections and placement support</li>
-            <li>Focus on practical learning and holistic development</li>
-            <li>Courses designed to meet global hospitality standards</li>
-            <li>Active student life with events, workshops, and competitions</li>
-          </ul>
-          <p style={{marginBottom:0}}>Our mission is to nurture future leaders of the hospitality industry by providing a blend of academic rigor, hands-on experience, and industry exposure. Join us to embark on a rewarding career in hospitality!</p>
+    <div className="hero-section-container">
+      <div className="hero-grid">
+        
+        {/* Left Side: Welcome and Branding */}
+        <div className="hero-brand-card">
+          <div className="hero-logo-wrapper">
+            <img src={logo} alt="Food Craft Institute Sumerpur Logo" className="hero-logo" />
+          </div>
+          <h1 className="hero-title">Welcome to Food Craft Institute Sumerpur</h1>
+          <p className="hero-subtitle">Affiliated with NCHMCT, Noida, Ministry of Tourism, Govt. of India</p>
+          
+          <div className="hero-badge-container">
+            <div className="hero-badge-item">
+              <span className="badge-icon"><FaAward /></span>
+              <span>100% Practical learning</span>
+            </div>
+            <div className="hero-badge-item">
+              <span className="badge-icon"><FaBuilding /></span>
+              <span>State-of-art Labs</span>
+            </div>
+            <div className="hero-badge-item">
+              <span className="badge-icon"><FaUserGraduate /></span>
+              <span>Top Placement Record</span>
+            </div>
+          </div>
         </div>
-      </section>
-      <section className="hero" id="home">
-        <img src={logo} alt="Food Craft Institute Sumerpur Logo" className="hero-logo" />
-        <h1>Welcome to Food Craft Institute Sumerpur</h1>
-        <p>FCI, Sumerpur</p>
-      </section>
-    </>
+
+        {/* Right Side: Introduction Info */}
+        <div className="hero-info-card">
+          <span className="info-tag">ABOUT THE INSTITUTE</span>
+          <h2 className="info-heading">Pioneering Excellence in Hospitality Education</h2>
+          <p className="info-intro">
+            FCI Sumerpur (Department of Tourism, Govt. of Rajasthan) is a premier institution dedicated to nurturing future leaders of the hospitality industry.
+          </p>
+          
+          <ul className="info-bullets">
+            <li>
+              <span className="check-icon"><FaCheckCircle /></span>
+              <span>Modern training kitchens, restaurants, and library resources</span>
+            </li>
+            <li>
+              <span className="check-icon"><FaCheckCircle /></span>
+              <span>Affiliated to NCHMCT for global hospitality standards</span>
+            </li>
+            <li>
+              <span className="check-icon"><FaCheckCircle /></span>
+              <span>Strong industry tie-ups ensuring premium placement support</span>
+            </li>
+            <li>
+              <span className="check-icon"><FaCheckCircle /></span>
+              <span>Highly qualified, experienced faculty providing individual focus</span>
+            </li>
+            <li>
+              <span className="check-icon"><FaCheckCircle /></span>
+              <span>Practical-first methodology for real-world career readiness</span>
+            </li>
+          </ul>
+
+          <p className="info-mission">
+            Our mission is to empower students with the theoretical depth and practical mastery needed to excel in 5-star establishments globally.
+          </p>
+        </div>
+
+      </div>
+    </div>
   );
 }
 

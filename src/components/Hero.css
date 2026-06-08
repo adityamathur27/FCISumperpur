@@ -1,46 +1,268 @@
-.hero {
+.hero-section-container {
+  max-width: 100%;
+  margin: 1rem auto;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: hsla(53, 72%, 49%, 1);
+
+  background: linear-gradient(90deg, hsla(53, 72%, 49%, 1) 0%, hsla(325, 82%, 39%, 1) 1%, hsla(239, 43%, 36%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(53, 72%, 49%, 1) 0%, hsla(325, 82%, 39%, 1) 1%, hsla(239, 43%, 36%, 1) 100%);
+
+  background: -webkit-linear-gradient(90deg, hsla(53, 72%, 49%, 1) 0%, hsla(325, 82%, 39%, 1) 1%, hsla(239, 43%, 36%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#D6C123", endColorstr="#B61271", GradientType=1);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* ----------------------
+   Left Brand Card
+-------------------------*/
+
+.hero-brand-card {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1rem 2rem 1rem;
-  background: #e3f2fd;
-}
-.hero-logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-.hero h1 {
-  font-size: 2.5rem;
-  color: #1976d2;
-  margin: 0.5rem 0;
-}
-.hero p {
-  font-size: 1.2rem;
-  color: #333;
+  text-align: center;
+  box-shadow: var(--glass-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .hero-logo {
-    width: 80px;
+.hero-brand-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(248, 190, 21, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-logo-wrapper {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  transition: var(--transition-smooth);
+}
+
+.hero-logo-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.hero-logo {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.hero-badge-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.hero-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius-sm);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  transition: var(--transition-smooth);
+}
+
+.hero-badge-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-gold);
+  transform: translateX(4px);
+}
+
+.badge-icon {
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ----------------------
+   Right Info Card
+-------------------------*/
+
+.hero-info-card {
+  background: var(--neutral-card);
+  color: #ffffff;
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: var(--glass-shadow);
+  border: 1px solid rgba(15, 43, 72, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-tag {
+  color: #ffffff;
+  background: var(--accent-light);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.info-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+  color: var(--primary-dark);
+}
+
+.info-intro {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+}
+
+.info-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.info-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.check-icon {
+  color: #10b981;
+  font-size: 1.1rem;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.info-mission {
+  border-left: 3px solid var(--accent-gold);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ----------------------
+   Responsive Layout
+-------------------------*/
+
+@media (max-width: 1200px) {
+  .hero-section-container {
+    max-width: 90%;
   }
-  .hero h1{
+
+  .hero-grid {
+    gap: 1.8rem;
+  }
+
+  .hero-title {
     font-size: 1.8rem;
   }
-  .hero p{
-    font-size: 1.2rem;
+
+  .info-heading {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-brand-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-info-card {
+    padding: 2.5rem;
   }
 }
 
 @media (max-width: 576px) {
+  .hero-section-container {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+
+  .hero-brand-card {
+    padding: 2rem 1rem;
+  }
+
+  .hero-info-card {
+    padding: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .info-heading {
+    font-size: 1.5rem;
+  }
+
   .hero-logo {
-    width: 80px;
-  }
-  .hero h1{
-    font-size: 1.8rem;
-  }
-  .hero p{
-    font-size: 1.2rem;
+    height: 90px;
   }
 }
