@@ -20,11 +20,13 @@ import FrontOffice from './pages/Courses/js/FrontOffice';
 import SkillDevelopment from './pages/Courses/js/SkillDevelopment';
 import AdmissionButton  from './components/AdmissionButton';
 import WhatsappIcon from './components/WhatsAppIcon';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function AppRouter() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

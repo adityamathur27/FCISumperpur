@@ -1,61 +1,109 @@
+.diploma-info-desc {
+  max-width: 750px;
+  margin: 1.5rem auto 2.5rem auto;
+  text-align: center;
+  font-size: 1.02rem;
+  color: var(--text-main);
+  background: var(--accent-light);
+  border: 1px solid rgba(248, 190, 21, 0.2);
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 15px rgba(248, 190, 21, 0.08);
+  line-height: 1.6;
+}
+
+.diploma-info-desc b {
+  color: var(--primary-dark);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+}
+
 .diploma-cards {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   margin-top: 2rem;
-  position: relative;
+  width: 100%;
 }
+
 .diploma-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(20,55,90,0.08);
-  padding: 1.5rem;
-  width: 320px;
-  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s, filter 0.3s;
+  background: #ffffff;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 15px rgba(15, 43, 72, 0.04);
+  border: 1px solid rgba(15, 43, 72, 0.06);
+  padding: 2rem;
+  width: 100%;
+  max-width: 320px;
   cursor: pointer;
-  z-index: 1;
   position: relative;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .diploma-card:hover, .diploma-card:focus {
-  transform: scale(1.08);
-  box-shadow: 0 8px 32px rgba(20,55,90,0.18);
-  z-index: 2;
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(15, 43, 72, 0.12);
+  border-color: rgba(248, 190, 21, 0.35);
+  outline: none;
 }
-.diploma-cards:hover .diploma-card:not(:hover) {
-  filter: blur(2.5px) brightness(0.95);
-  z-index: 0;
+
+.diploma-card h3 {
+  color: var(--primary-dark);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-family: 'Outfit', sans-serif;
+  border-bottom: 2px solid var(--accent-gold);
+  padding-bottom: 6px;
+  display: inline-block;
+  align-self: flex-start;
 }
-.diploma-card:focus {
-  outline: 2px solid #1976d2;
+
+.diploma-card p {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
 }
-.course-detail {
-  background: #fff;
-  margin: 2.5rem auto;
-  padding: 2.5rem 1.5rem;
-  max-width: 900px;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(20,55,90,0.10);
-  text-align: left;
+
+.diploma-card p b {
+  color: var(--primary-dark);
 }
-.course-detail h2 {
-  color: #14375a;
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
+
+.read-more-link {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(248, 190, 21, 0.2);
+  align-self: flex-start;
 }
-.course-detail img {
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  box-shadow: 0 2px 12px rgba(20,55,90,0.08);
+
+.diploma-card:hover .read-more-link {
+  background: var(--primary-dark);
+  color: var(--accent-gold);
+  border-color: var(--primary-dark);
 }
-.course-detail ul {
-  margin: 1rem 0 1.5rem 1.2rem;
-  color: #14375a;
-  font-size: 1.08rem;
-  line-height: 1.7;
-}
-.course-detail p {
-  color: #333;
-  font-size: 1.12rem;
-  line-height: 1.7;
+
+@media (max-width: 768px) {
+  .diploma-info-desc {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+  }
+  .diploma-cards {
+    gap: 1.25rem;
+  }
+  .diploma-card {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
 }

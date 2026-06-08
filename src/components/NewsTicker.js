@@ -3,12 +3,12 @@ import './NewsTicker.css';
 
 const news = [
   {
-    text: 'Download Admissions Form for 2025-26!',
+    text: 'Download Admissions Form for 2026-27!',
     url: require('../assets/pdfs/Admission_Form.pdf')
   },
   {
     text: 'Download the latest Academic Calendar.',
-    url: require('../assets/pdfs/Academic_Calendar_2025-26.pdf')
+    url: require('../assets/pdfs/Academic_Calender_2026-27.pdf')
   }
 ];
 function NewsTicker() {
@@ -18,7 +18,7 @@ function NewsTicker() {
       <div className="ticker-wrap" aria-label="News Ticker">
         <div className="ticker-move">
           {news.map((item, idx) => (
-            <span key={idx} style={{marginRight: 24}}>
+            <span key={idx} style={{ marginRight: 24 }}>
               <a
                 href={item.url}
                 target="_blank"
@@ -27,7 +27,7 @@ function NewsTicker() {
               >
                 {item.text}
               </a>
-              {idx !== news.length - 1 && <span style={{color:'#1976d2',margin:'0 8px'}}>|</span>}
+              {idx !== news.length - 1 && <span style={{ color: '#1976d2', margin: '0 8px' }}>|</span>}
             </span>
           ))}
         </div>
