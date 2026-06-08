@@ -75,15 +75,21 @@ FCISumperpur/
 
 Here are the easiest methods to publish this portal to the internet:
 
-### Option 1: Vercel or Netlify (Recommended - Free & Easiest)
-This is the modern standard for deploying React apps.
-1. Create a free account on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
-2. Click **Add New Project** and link it to your GitHub repository.
-3. The platform will auto-detect **Create React App**. Leave the settings as default:
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `build`
-4. Click **Deploy**. Your site will be online in seconds.
-5. *Bonus:* Every time you push a code change to GitHub, Vercel/Netlify will automatically build and update the site!
+### Option 1: Vercel via GitHub Actions (Automated CI/CD)
+The repository is configured to deploy automatically to Vercel via a GitHub Actions pipeline (`.github/workflows/ci.yml`) **only after** all compilation and testing checks pass successfully.
+
+To enable this:
+1. Navigate to your repository on **GitHub.com**.
+2. Go to **Settings** > **Secrets and variables** > **Actions**.
+3. Under **Repository secrets**, click **New repository secret** and add:
+   - Name: `VERCEL_TOKEN`
+     Value: *(Paste your Vercel Personal Access Token here)*
+4. The Org ID and Project ID are already preconfigured inside the workflow file. The pipeline will automatically:
+   - Verify the production build and test suites.
+   - Deploy preview builds on push events to the `dev` branch.
+   - Deploy production builds on push/merge events to the `main` branch.
+
+*Note: Azure Web App and Static Web App pipelines have been commented out to prevent conflicting deployments.*
 
 ### Option 2: Shared Hosting (cPanel / Hostinger / GoDaddy)
 If you already have a domain and web hosting:
